@@ -4,36 +4,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="public/prism/css/prism.css">
+    <link rel="Copy icon" href="favicon.ico" type="image/x-icon">
     <title>Cheatsheet Pro</title>
 </head>
 <body>
-    <div class="navbar">
+    <div class="navbar flexible">
         <img src="images/copyIcon.png" alt="copy">
         <h1>The Ultimate Cheatsheet Ever</h1>
-        <div class="searchbar">
-            <div class="searchbox"></div>
-            <div class="searchbutton"></div>
+        <div class="searchbox flexible">
+            <input type="text" name="searchInput" id="searchInput">
+            <i class="fa fa-search" aria-hidden="true"></i>
         </div>
     </div>
 
-    <div class="container">
-        <div class="Html">
+    <div class="container flexible">
+        <div class="Html flexible content">
+            <h2>HTML</h2>
             <ol>
-                <li>Html Boilerplate</li>
+                <div class="codeSnippet">
+                <li><h3>Html Boilerplate</h3></li>
+                    <pre class="language-html"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+                </div>
             </ol>
         </div>
 
-        <div class="Css">
+        <div class="Css flexible content">
+            <h2>CSS</h2>
             <ol>
-                <li>Grid Basics</li>
+                <div class="codeSnippet">
+                    
+                <li><h3>Grid Basics</h3></li>
+                <pre class="language-css"><code>display: grid;
+grid-template-columns: 300px 100px 100px;
+grid-template-columns: 300px auto 100px;
+grid-template-columns: 1fr 4fr 1fr;
+grid-template-columns: repeat(3, auto);
+
+grid-column-gap: 7rem;
+grid-row-gap: 1rem;
+grid-gap: 2rem;
+
+grid-template-rows: 1fr 1fr 4fr;
+grid-auto-rows: 2fr;
+
+grid-column-start: 1;
+grid-column-end: 3;
+grid-row-start: 1;
+grid-row-end: 3;
+grid-column: 1 / span 3;
+grid-row: 1 / span 3;
+
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+grid-template-columns: repeat(auto-fit, minmax(300px, 400px);
+
+grid-template-areas: 
+'navbar navbar navbar navbar' 
+'section section section aside'
+'footer footer footer footer ';
+#navbar{
+        grid-area: navbar;
+    }
+#section{
+    grid-area: section;
+}
+#aside{
+    grid-area: aside;
+}
+footer{
+    grid-area: footer;
+}</code></pre>
+                </div>
+
+                <div class="codeSnippet">
+                    <li><h3>Box Sizing</h3></li>
+                    <pre class="language-css"><code>.div2 {
+width: 300px;
+height: 100px;
+padding: 50px;
+border: 1px solid red;
+box-sizing: border-box;
+}</code></pre>
+                </div>
             </ol>
         </div>
 
-        <div class="js">
+        <div class="js flexible content">
+            <h2>JavaScript</h2>
             <ol>
-                <li>Variables Assignment</li>
+                <div class="codeSnippet">
+                    <li><h3>Variables Assignment</h3></li>
+                    <pre class="language-js"><code>const myVariable = 45;
+console.log(myVariable);</code></pre>
+                </div>
             </ol>
         </div>
     </div>
 </body>
+<script src="public/js/script.js"></script>
+<script src="public/prism/js/prism.js"></script>
 </html>
