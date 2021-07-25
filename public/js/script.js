@@ -2,21 +2,41 @@ window.onload = ()=>{
     searchInput.value = '';
     }
 
-const codeSnippet = document.getElementsByClassName('codeSnippet');
-const h3Tags = document.getElementsByTagName('h3');
 const content = document.getElementsByClassName('content');
+const category = document.getElementsByClassName('category');
+const codeBlocks = document.getElementsByClassName('codeBlocks');
 
 searchInput.addEventListener('keyup',()=>{
-    let inputValue = searchInput.value;
-    for (i = 0; i < h3Tags.length; i++) {
-        if (!h3Tags[i].innerHTML.toLowerCase().includes(inputValue.toLowerCase())) {
-            codeSnippet[i].style.display="none";
 
+    let inputValue = (searchInput.value).toLowerCase().trim();
+    let searchFound = false;
+
+    for(i=0; i<category.length; i++){
+
+        headerVisible = false;
+        let codeSnippet = codeBlocks[i].getElementsByClassName('codeSnippet');
+        for(j=0; j<codeSnippet.length; j++){
+
+            let h3Tag = codeSnippet[j].getElementsByTagName('h3')[0];
+            if(!h3Tag.innerHTML.toLowerCase().includes(inputValue)){
+                codeSnippet[j].style.display = 'none';
+            }
+            else{
+                headerVisible = true;
+                searchFound = true;
+                codeSnippet[j].style.display = '';
+            }
         }
-        else {
-            codeSnippet[i].style.display='';                
+        if(headerVisible){
+            category[i].style.display = '';
+        }
+        else{
+            category[i].style.display = 'none';
         }
     }
 
-// left space for removing the h3 tags such as html css javascript if no items are there in the dom
+if(!searchFound){
+    alert('No Search found');
+}
+
 })
