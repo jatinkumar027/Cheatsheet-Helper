@@ -4,3 +4,7 @@ Created a Simple Cheatsheet website with the help of HTML, CSS, Javascript and P
 ## Screenshot
 
 ![Screenshot](https://github.com/jatinkumar027/Cheatsheet-Pro/blob/main/Screenshot.png?raw=true)
+
+## Known issue
+
+If no items are present inside the particular container, the container should be removed
