@@ -9,7 +9,7 @@ const content = document.getElementsByClassName('content');
 searchInput.addEventListener('keyup',()=>{
     let inputValue = searchInput.value;
     for (i = 0; i < h3Tags.length; i++) {
-        if (!h3Tags[i].innerHTML.toLowerCase().includes(inputValue)) {
+        if (!h3Tags[i].innerHTML.toLowerCase().includes(inputValue.toLowerCase())) {
             codeSnippet[i].style.display="none";
 
         }
