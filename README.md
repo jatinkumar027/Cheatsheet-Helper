@@ -14,10 +14,6 @@ HTML, CSS, Javascript
 
 ![Screenshot](https://github.com/jatinkumar027/Cheatsheet-Pro/blob/main/Screenshot.png?raw=true)
 
-## Known issue
-
-If no items are present inside the particular container, the container should be removed
-
 ## Badges
 
 [![MIT License](https://img.shields.io/apm/l/atomic-design-ui.svg?)](https://github.com/tterb/atomic-design-ui/blob/master/LICENSEs)
